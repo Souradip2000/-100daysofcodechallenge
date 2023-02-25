@@ -1,0 +1,23 @@
+// Reverse the array after m position
+
+#include <bits/stdc++.h> 
+void reverseArray(vector<int> &arr , int m)
+{
+	// Solution 1 :-
+	//reverse(arr.begin()+m+1,arr.end());
+
+	// Solution 2 :-
+	int i = m+1;
+	int size_of_subarray = arr.size() - (m+1);
+
+	// loop for swapping will run (size_of_subarray/2) times
+	int j=arr.size()-1;
+
+	//for(int k=0; k<=size_of_subarray/2; k++)
+	while(i <= j)
+	{
+		swap(arr[i],arr[j]);
+		i++;
+		j--;
+	}
+}
