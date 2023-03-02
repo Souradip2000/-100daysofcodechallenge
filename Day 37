@@ -1,0 +1,56 @@
+// Reverse WordWise
+
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+// string revWord(string s)
+// {
+//     reverse(s.begin(),s.end());
+//     cout<<endl<<"Reversed word : ";
+//     cout<<s;
+//     return s;
+// }
+
+string revWordWise(string s)
+{
+    // extract each word
+    string temp;
+    string word;
+    for( char c : s)
+    {
+        //cout<<c;
+        if(c!=' ' && c!='\0')
+        {
+            word = word + c;
+            //word.push_back(c);
+            //cout<<word<<endl;
+        }
+        else
+        {
+            //string a =revWord(word);
+            reverse(word.begin(), word.end());
+            temp = temp + word;
+            //cout<<endl<<"Reversed string : "<<temp<<endl;
+            word.erase(word.begin(), word.end());
+            temp.push_back(' ');
+        }
+    }
+    //cout<<temp;
+    return temp;
+}
+
+int main() {
+    // Take input and store
+    string s;
+    getline(cin,s);
+
+    // reverseWordWise
+    string ans = revWordWise(s+'\0');
+    
+    cout<<ans;
+    return 0;
+}
