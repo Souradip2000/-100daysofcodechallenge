@@ -1,0 +1,33 @@
+class Solution {
+public:
+    int findKthPositive(vector<int>& arr, int k) {
+       // initialise array of missing elements
+       vector<int> kth;
+       for(int i=0; i<2000; i++)
+            kth.push_back(i+1);
+
+       // compare and remove the elements present from array of missing elements
+       for(int i=0; i<arr.size(); i++)
+       {
+           int temp = arr[i];
+           //kth.erase(kth.begin()+temp-1);
+
+           int index = temp-1;
+           kth[index] = 0;
+       }
+
+       // return the kth element of the kth_arr 
+       //return kth.at(k);
+
+        int pos = 0;
+       for(int i : kth)
+       {
+           if(i==0)
+            continue;
+           else if(++pos==k )
+             return i;
+       }
+
+       return -1;
+    }
+};
