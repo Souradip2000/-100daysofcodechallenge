@@ -2,7 +2,7 @@
 
 // 268. - Missing number
 
-#include <bits/stdc++.h>
+#include <bits/stdc++.h>    // used to include all libraries
 
 class Solution {
 public:
