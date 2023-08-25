@@ -1,0 +1,17 @@
+class Solution {
+public:
+    int ask(int n){
+        if(n<10)    return n;
+        return max(n%10, ask(n/10));
+    }
+    int maxSum(vector<int>& nums) {
+        int n=nums.size(), ans=-1;
+        for(int i=0; i<n; i++){
+            for(int j=i+1; j<n; j++){
+                if(ask(nums[i])==ask(nums[j]))
+                    ans=max(ans, nums[i]+nums[j]);
+            }
+        }
+        return ans;
+    }
+};
