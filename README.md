@@ -22,16 +22,6 @@ Feel free to reach out if you have questions, suggestions, or just want to conne
 
 Happy coding! 🤓
 
-## Additional Information
-
-- [Challenge Log](challenge-log.md): A daily log of my coding activities, including links to specific days.
-
-- [Resources](resources.md): A list of coding resources, tutorials, and books that I found particularly valuable during the challenge.
-
-- [Projects](projects/): A directory containing the code and documentation for the various projects I've worked on.
-
-- [Challenges](challenges/): A collection of coding challenges I faced during the challenge, along with my solutions.
-
 ---
 
 Thank you for joining me on this coding journey. Let's keep coding and improving together!
