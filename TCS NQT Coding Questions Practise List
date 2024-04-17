@@ -1,0 +1,39 @@
+Contents:
+
+1. Fibonacci series
+2.
+
+
+
+__________________________________________________________________________________________________________________________________________________
+
+
+
+1.   // Print the fibonacci series upto the nth term
+#include<iostream>
+using namespace std;
+
+int main(){
+    int n;
+    cout<<"Enter the nth term:";
+    cin>>n;
+    
+    int i=3;
+    int fterm=0;
+    int sterm=1;
+    if(n==0){
+        cout<<fterm;
+    }else if(n==1){
+        cout<<fterm<<" "<<sterm;
+    }else if(n>=2){
+        cout<<fterm<<" "<<sterm;
+        while(i<=n){
+            int tterm=fterm+sterm;
+            cout<<" "<<tterm;
+            fterm=sterm;
+            sterm=tterm;
+            i++;
+        }
+    }
+    return 0;
+}
